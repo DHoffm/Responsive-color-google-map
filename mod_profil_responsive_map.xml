@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" client="site" version="3.1" method="upgrade">
+  <name>Responsive color google map</name>
+  <author>David Hoffmann</author>
+  <authorEmail>web@profilpr.de</authorEmail>
+  <authorUrl>Profilpr</authorUrl>
+  <copyright>Copyright (c) 2014 Profil PR &amp; Werbeagentur All rights reserved.</copyright>
+  <creationDate>January 22th, 2014</creationDate>
+  <license>GNU/GPL license: http://www.gnu.org/copyleft/gpl.html</license>
+  <version>1.0</version>
+  <description>MOD_PROFIL_RESPONSIVE_MAP_DESCRIPTION</description>
+  <config>
+    <fields name="params">
+      <fieldset name="basic" addfieldpath="/modules/mod_profil_responsive_map/includes/elements">
+        <field name="profilResponsiveMapTemplates" type="template" default="default" label="MOD_PROFIL_RESPONSIVE_MAP_TEMPLATE" description="Das verwendete Template." />
+        <field name="profilResponsiveMapGeoCoordinates" type="GeoData" label="MOD_PROFIL_RESPONSIVE_MAP_COORDINATES" description="MOD_PROFIL_RESPONSIVE_MAP_COORDINATES_DESCRIPTION" filter="raw" required="true" />
+        <field name="profilResponsiveMapColor" type="color" required="true" default="#123456" label="MOD_PROFIL_RESPONSIVE_MAP_COLOR" description="MOD_PROFIL_RESPONSIVE_MAP_COLOR_DESCRIPTION" />
+        <field name="profilResponsiveMapContrast" type="text" required="true" default="1.58" label="MOD_PROFIL_RESPONSIVE_MAP_CONTRAST" description="MOD_PROFIL_RESPONSIVE_MAP_CONTRAST_DESCRIPTION" />
+        <field name="profilResponsiveMapSaturation" type="text" required="true" default="0" label="MOD_PROFIL_RESPONSIVE_MAP_SATURATION" description="MOD_PROFIL_RESPONSIVE_MAP_SATURATION_DESCRIPTION" />
+        <field name="profilResponsiveMapLightness" type="text" required="true" default="0" label="MOD_PROFIL_RESPONSIVE_MAP_LIGHTNESS" description="MOD_PROFIL_RESPONSIVE_MAP_LIGHTNESS_DESCRIPTION" />
+        <field name="profilResponsiveMapZoom" type="text" required="true" default="14" label="MOD_PROFIL_RESPONSIVE_MAP_ZOOM" description="MOD_PROFIL_RESPONSIVE_MAP_ZOOM_DESCRIPTION" />
+        <field name="profilResponsivePanControl" type="radio" default="1" label="MOD_PROFIL_RESPONSIVE_MAP_PAN_CONTROL" description="">
+          <option value="0">MOD_PROFIL_RESPONSIVE_MAP_NO</option>
+          <option value="1">MOD_PROFIL_RESPONSIVE_MAP_YES</option>
+        </field>
+        <field name="profilResponsiveZoomControl" type="radio" default="1" label="MOD_PROFIL_RESPONSIVE_MAP_ZOOM_CONTROL" description="">
+          <option value="0">MOD_PROFIL_RESPONSIVE_MAP_NO</option>
+          <option value="1">MOD_PROFIL_RESPONSIVE_MAP_YES</option>
+        </field>
+        <field name="profilResponsiveMapTypeControl" type="radio" default="1" label="MOD_PROFIL_RESPONSIVE_MAP_MAP_TYPE_CONTROL" description="">
+          <option value="0">MOD_PROFIL_RESPONSIVE_MAP_NO</option>
+          <option value="1">MOD_PROFIL_RESPONSIVE_MAP_YES</option>
+        </field>
+        <field name="profilResponsiveScaleControl" type="radio" default="1" label="MOD_PROFIL_RESPONSIVE_MAP_SCALE_CONTROL" description="">
+          <option value="0">MOD_PROFIL_RESPONSIVE_MAP_NO</option>
+          <option value="1">MOD_PROFIL_RESPONSIVE_MAP_YES</option>
+        </field>
+        <field name="profilResponsiveStreetViewControl" type="radio" default="1" label="MOD_PROFIL_RESPONSIVE_MAP_STREETVIEW_CONTROL" description="">
+          <option value="0">MOD_PROFIL_RESPONSIVE_MAP_NO</option>
+          <option value="1">MOD_PROFIL_RESPONSIVE_MAP_YES</option>
+        </field>
+        <field name="profilResponsiveScrollwheel" type="radio" default="1" label="MOD_PROFIL_RESPONSIVE_MAP_MOUSEWHEEL_ZOOM" description="">
+          <option value="0">MOD_PROFIL_RESPONSIVE_MAP_NO</option>
+          <option value="1">MOD_PROFIL_RESPONSIVE_MAP_YES</option>
+        </field>
+        <field name="profilResponsiveFullscreen" type="radio" default="0" label="MOD_PROFIL_RESPONSIVE_MAP_FULLSCREEN" description="MOD_PROFIL_RESPONSIVE_MAP_FULLSCREEN_DESCRIPTION">
+          <option value="0">MOD_PROFIL_RESPONSIVE_MAP_NO</option>
+          <option value="1">MOD_PROFIL_RESPONSIVE_MAP_YES</option>
+        </field>
+        <field name="profilResponsiveVisibility" type="radio" default="0" label="MOD_PROFIL_RESPONSIVE_MAP_VISIBILITY" description="MOD_PROFIL_RESPONSIVE_MAP_VISIBILITY_DESCRIPTION">
+          <option value="0">MOD_PROFIL_RESPONSIVE_MAP_NO</option>
+          <option value="1">MOD_PROFIL_RESPONSIVE_MAP_YES</option>
+        </field>
+        <field name="profilResponsiveDescription" type="editor" label="MOD_PROFIL_RESPONSIVE_MAP_TEXT_BELOW" description="" filter="safehtml" />
+      </fieldset>
+      <fieldset name="overlays" label="MOD_PROFIL_RESPONSIVE_MAP_OVERLAYS_FIELDSET_LABEL" addfieldpath="/modules/mod_profil_responsive_map/includes/elements">
+        <field name="profilResponsiveBikemap" type="radio" default="0" label="MOD_PROFIL_RESPONSIVE_MAP_BIKEMAP" description="MOD_PROFIL_RESPONSIVE_MAP_BIKEMAP_DESCRIPTION">
+          <option value="0">MOD_PROFIL_RESPONSIVE_MAP_NO</option>
+          <option value="1">MOD_PROFIL_RESPONSIVE_MAP_YES</option>
+        </field>
+        <field name="profilResponsiveWeathermap" type="radio" default="0" label="MOD_PROFIL_RESPONSIVE_MAP_WEATHERMAP" description="MOD_PROFIL_RESPONSIVE_MAP_WEATHERMAP_DESCRIPTION">
+          <option value="0">MOD_PROFIL_RESPONSIVE_MAP_NO</option>
+          <option value="1">MOD_PROFIL_RESPONSIVE_MAP_YES</option>
+        </field>
+        <field name="profilResponsiveWeathermapTemperatureunit" type="radio" default="0" label="MOD_PROFIL_RESPONSIVE_MAP_WEATHERMAP_TEMPERATUREUNIT" description="">
+          <option value="0">MOD_PROFIL_RESPONSIVE_MAP_CELSIUS</option>
+          <option value="1">MOD_PROFIL_RESPONSIVE_MAP_FAHRENHEIT</option>
+        </field>
+        <field name="profilResponsiveCloudmap" type="radio" default="0" label="MOD_PROFIL_RESPONSIVE_MAP_CLOUDMAP" description="MOD_PROFIL_RESPONSIVE_MAP_CLOUDMAP_DESCRIPTION">
+          <option value="0">MOD_PROFIL_RESPONSIVE_MAP_NO</option>
+          <option value="1">MOD_PROFIL_RESPONSIVE_MAP_YES</option>
+        </field>
+        <field name="profilResponsiveTrafficmap" type="radio" default="0" label="MOD_PROFIL_RESPONSIVE_MAP_TRAFFICMAP" description="MOD_PROFIL_RESPONSIVE_MAP_TRAFFICMAP_DESCRIPTION">
+          <option value="0">MOD_PROFIL_RESPONSIVE_MAP_NO</option>
+          <option value="1">MOD_PROFIL_RESPONSIVE_MAP_YES</option>
+        </field>
+      </fieldset>
+      <fieldset name="advanced">
+        <field name="cache" type="list" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+          <option value="1">JGLOBAL_USE_GLOBAL</option>
+          <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+        </field>
+        <field name="cache_time" type="text" default="900" label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+      </fieldset>
+    </fields>
+  </config>
+  <files>
+    <filename module="mod_profil_responsive_map">mod_profil_responsive_map.php</filename>
+    <filename>helper.php</filename>
+    <filename>index.html</filename>
+    <filename>language/en-GB/en-GB.mod_profil_responsive_map.sys.ini</filename>
+    <filename>language/de-DE/de-DE.mod_profil_responsive_map.sys.ini</filename>
+    <folder>tmpl</folder>
+    <folder>js</folder>
+    <folder>css</folder>
+    <folder>includes</folder>
+    <folder>language</folder>
+  </files>
+  <languages folder="language">
+    <language tag="en-GB">en-GB/en-GB.mod_profil_responsive_map.ini</language>
+    <language tag="en-GB">en-GB/en-GB.mod_profil_responsive_map.sys.ini</language>
+    <language tag="de-DE">de-DE/de-DE.mod_profil_responsive_map.ini</language>
+    <language tag="de-DE">de-DE/de-DE.mod_profil_responsive_map.sys.ini</language>
+  </languages>
+</extension>

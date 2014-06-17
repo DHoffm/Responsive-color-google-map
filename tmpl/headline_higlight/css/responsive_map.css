@@ -1,0 +1,125 @@
+/**
+ * @version   1.0.2
+ * @package   Profil responsive map (module)
+ * @author    David Hoffmann - http://www.profilpr.de
+ * @copyright Copyright (c) 2014 Profilpr. All rights reserved.
+ * @license   GNU/GPL license: http://www.gnu.org/copyleft/gpl.html
+*/
+/* Template: headline_highlight */
+.responsive_map {
+  height: 400px; 
+  width: 100%;
+  margin: 0 auto;
+}
+div.responsive_map, div.responsive_map div{ 
+  overflow:visible;
+}
+.responsive_map img {
+  max-width: none!important;
+}
+img[src*="iws3.png"] { 
+  display: none;
+}
+.headline_higlight_responsive_map .gm-style-iw {
+  max-width: none !important; 
+  min-width: none !important;
+    max-height: none !important; 
+  min-height: none !important; 
+  overflow-y: hidden !important; 
+  overflow-x: hidden !important; 
+  line-height: normal !important; 
+  padding: 0px !important;
+  left: 0!important;
+  top: 0!important;
+  width: 100%!important;
+}
+.gm-style-iw a:link, .gm-style-iw a:visited, .gm-style-iw a:hover, .gm-style-iw a:active { 
+  text-decoration: underline !important; 
+}
+.gm-style .gm-style-iw div {
+  font-size: 14px !important;
+}
+
+img[src="http://maps.gstatic.com/mapfiles/api-3/images/mapcnt3.png"] {
+   display: block;
+}
+
+.headline_higlight_responsive_map .gmap_marker {
+  padding:12px 30px 12px 12px;
+}
+
+.headline_higlight_responsive_map .gmap_marker h1,
+.headline_higlight_responsive_map .gmap_marker h2,
+.headline_higlight_responsive_map .gmap_marker h3,
+.headline_higlight_responsive_map .gmap_marker h4,
+.headline_higlight_responsive_map .gmap_marker h5 {
+  margin: -12px -30px 12px -12px;
+  padding: 12px;
+  background-color: #303030;
+  color: #dfdfdf;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-top-right-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-topright: 3px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  text-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+  font-weight: normal;
+}
+
+.responsive_map_description {
+  margin-top: 15px;
+}
+
+.responsive_map_fullscreen {
+  position: fixed!important;
+  width: 90%;
+  left: 5%;
+  height: 90%;
+  top: 5%;
+  z-index: 9999;
+  border: 5px solid #303030;
+}
+
+.responsive_map_fullscreen_dim {
+  height:100%;
+  width:100%;
+  position:fixed;
+  left:0;
+  top:0;
+  z-index:9998 !important;
+  background-color:black;
+  filter: alpha(opacity=75); /* internet explorer */
+  -khtml-opacity: 0.75;      /* khtml, old safari */
+  -moz-opacity: 0.75;       /* mozilla, netscape */
+  opacity: 0.75;           /* fx, safari, opera */
+  display: none;
+}
+
+.responsive_map_fullscreen_button {
+  direction: ltr;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  color: rgb(86, 86, 86);
+  font-family: Roboto, Arial, sans-serif;
+  -webkit-user-select: none;
+  font-size: 11px;
+  background-color: rgb(255, 255, 255);
+  padding: 1px 6px;
+  border-bottom-right-radius: 2px;
+  border-top-right-radius: 2px;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border-width: 1px 1px 1px 0px;
+  border-top-style: solid;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-top-color: rgba(0, 0, 0, 0.14902);
+  border-right-color: rgba(0, 0, 0, 0.14902);
+  border-bottom-color: rgba(0, 0, 0, 0.14902);
+  -webkit-box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px;
+  box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px;
+  min-width: 37px;
+}

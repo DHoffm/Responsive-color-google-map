@@ -1,0 +1,40 @@
+/**
+ * Changelog
+ *
+ * @package         Profil responsive map (module)
+ * @version         1.0.2
+ *
+ * @author          David Hoffmann
+ * @link            http://www.profilpr.de
+ * @copyright       Copyright (c) 2014 Profilpr. All rights reserved.
+ * @license         GNU/GPL license: http://www.gnu.org/copyleft/gpl.html
+ */
+
+/**
+ * + Added
+ * ! Removed
+ * ^ Changed
+ * # Fixed
+ */
+
+16-Jun-2014 : v1.0.2
+  # Fixed some Jquery Bugs
+  + Added route template to get a route to a location
+
+11-Jun-2014 : v1.0.1
+ ^ changed saved path of marker images saved in database to be a relative path
+ # Fixed issue when staging a local joomla site to production server, marker image paths where absolute and therefore wrong (thanks Volli for the hint)
+ ^ changed usage of $_SERVER['DOCUMENT_ROOT'] . JURI::root(true) to JPATH_SITE in geodate.php,
+ # Fixed issue with Apache Directory Aliasses (thanks Volli)
+ ! Removed colorpicker.js in favour of the much simplier joomla color field type which is supported since 2.5
+ + Added search template to filter marker results
+
+28-Apr-2014 : v1.0.0
+ + displaying a custom colored responsive Google map (api 3)
+ + displaying multiple markers on the same map
+ + displaying multiple maps on the same website path
+ + assigning an individual icon and label to each marker
+ + controlling all basic Google GUI settings (pan, zoom, type of map etc.)
+ + using Google map styles (color, contrast, saturation, lightness etc.)
+ + using own templates to configure the map according to your own needs
+ + adding your own icons by using template overrides
