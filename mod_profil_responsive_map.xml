@@ -90,6 +90,7 @@
     <filename>index.html</filename>
     <filename>language/en-GB/en-GB.mod_profil_responsive_map.sys.ini</filename>
     <filename>language/de-DE/de-DE.mod_profil_responsive_map.sys.ini</filename>
+    <filename>language/fr-FR/fr-FR.mod_profil_responsive_map.sys.ini</filename>
     <folder>tmpl</folder>
     <folder>js</folder>
     <folder>css</folder>
@@ -101,5 +102,7 @@
     <language tag="en-GB">en-GB/en-GB.mod_profil_responsive_map.sys.ini</language>
     <language tag="de-DE">de-DE/de-DE.mod_profil_responsive_map.ini</language>
     <language tag="de-DE">de-DE/de-DE.mod_profil_responsive_map.sys.ini</language>
+    <language tag="fr-FR">fr-FR/fr-FR.mod_profil_responsive_map.ini</language>
+    <language tag="fr-FR">fr-FR/fr-FR.mod_profil_responsive_map.sys.ini</language>
   </languages>
 </extension>

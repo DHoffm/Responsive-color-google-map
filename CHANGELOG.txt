@@ -17,6 +17,9 @@
  * # Fixed
  */
 
+23-Jun-2014 : v1.1.0
+  + Added french translation, (thanks to Elyes Benrabah, elyes.benrabah@gmail.com)
+
 16-Jun-2014 : v1.0.2
   # Fixed some Jquery Bugs
   + Added route template to get a route to a location
@@ -25,7 +28,7 @@
  ^ changed saved path of marker images saved in database to be a relative path
  # Fixed issue when staging a local joomla site to production server, marker image paths where absolute and therefore wrong (thanks Volli for the hint)
  ^ changed usage of $_SERVER['DOCUMENT_ROOT'] . JURI::root(true) to JPATH_SITE in geodate.php,
- # Fixed issue with Apache Directory Aliasses (thanks Volli)
+ # Fixed issue with Apache Directory Aliasses (thanks to Volli, illov@web.de)
  ! Removed colorpicker.js in favour of the much simplier joomla color field type which is supported since 2.5
  + Added search template to filter marker results
 
