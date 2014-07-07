@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.1.1" encoding="utf-8"?>
 <extension type="module" client="site" version="3.1" method="upgrade">
   <name>Responsive color google map</name>
   <author>David Hoffmann</author>
@@ -7,7 +7,7 @@
   <copyright>Copyright (c) 2014 Profil PR &amp; Werbeagentur All rights reserved.</copyright>
   <creationDate>January 22th, 2014</creationDate>
   <license>GNU/GPL license: http://www.gnu.org/copyleft/gpl.html</license>
-  <version>1.0</version>
+  <version>1.1.1</version>
   <description>MOD_PROFIL_RESPONSIVE_MAP_DESCRIPTION</description>
   <config>
     <fields name="params">

@@ -54,8 +54,8 @@ jQuery( document ).ready(function( $ ) {
         if (typeof c_value.icon !== 'undefined') {
           var custom_icon = {
             image: c_value.icon,
-            iconsize: [c_value.icon_width, c_value.icon_height], 
-            iconanchor: [parseInt(c_value.icon_width/2),parseInt(c_value.icon_height/2)], 
+            iconsize: [c_value.icon_width, c_value.icon_height],
+            iconanchor: [parseInt(c_value.icon_width/2),parseInt(c_value.icon_height/2)],
             infowindowanchor: [parseInt(c_value.icon_width/2), 0]
           }
           marker.icon = custom_icon;
@@ -89,7 +89,12 @@ jQuery( document ).ready(function( $ ) {
 
       var gmap = $('#' + identifier).data('gmap').gmap;
 
-      var marker_amount = Object.keys(custom_markers).length;
+      var marker_amount = 0; // Object.keys(markers).length is not supported in IE < 9 therefore use a loop
+      for (i in markers) {
+        if (markers.hasOwnProperty(i)) {
+          marker_amount++;
+        }
+      }
       if (marker_amount > 1) {
         var bound = new google.maps.LatLngBounds();
         var fit_marker;

@@ -17,6 +17,9 @@
  * # Fixed
  */
 
+23-Jun-2014 : v1.1.1
+  + BugFix for IE8, Javascript Object.keys function not working there
+
 23-Jun-2014 : v1.1.0
   + Added french translation, (thanks to Elyes Benrabah, elyes.benrabah@gmail.com)
 

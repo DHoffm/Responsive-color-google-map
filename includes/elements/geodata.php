@@ -1,6 +1,6 @@
 <?php
 /**
- * @version   1.0.2
+ * @version   1.1.1
  * @package   Responsive color google map (module)
  * @author    David Hoffmann - http://www.profilpr.de
  * @copyright Copyright (c) 2014 Profilpr. All rights reserved.
@@ -8,15 +8,15 @@
  */
 // no direct access
 defined('_JEXEC') or die('Restricted access');
- 
+
 jimport('joomla.form.formfield');
- 
+
 class JFormFieldGeoData extends JFormField {
- 
+
   protected $type = 'GeoData';
 
   public function getInput() {
-  
+
     $document = JFactory::getDocument();
 
     // find the frontpage template form the backend, this is the best solution i found so far
@@ -43,7 +43,7 @@ class JFormFieldGeoData extends JFormField {
     // normal joomla modal box is not sufficient because its prototype and can't be reattached to elements, instead use fancybox which works perfectly
     $document->addScript(JURI::root().'modules/mod_profil_responsive_map/js/fancybox/source/jquery.fancybox.pack.js');
     $document->addStyleSheet(JURI::root().'modules/mod_profil_responsive_map/js/fancybox/source/jquery.fancybox.css');
-    
+
     // some css to theme the admin module config
     $document->addStyleSheet(JURI::root().'modules/mod_profil_responsive_map/css/mod_profil_responsive_map.css');
 
@@ -60,10 +60,10 @@ class JFormFieldGeoData extends JFormField {
     $remove_button = '<a href="#" class="btn icon-cancel geoDataRemove"><span>' . JText::_('MOD_PROFIL_RESPONSIVE_MAP_REMOVE') . '</span></a>';
 
     // the javascript config array
-    $map_config['general'] = array( 
+    $map_config['general'] = array(
       'removeButton' => $remove_button
     );
-    
+
     // add the javascript config array to the page
     $js = 'var mod_profil_responsive_map_config =' . json_encode( $map_config ) . ';';
     $document->addScriptDeclaration($js);
@@ -102,7 +102,7 @@ class JFormFieldGeoData extends JFormField {
         }
       }
     }
-    
+
     // output all coordinate blocks
     if (!empty($data)) {
       for($i = 0, $j = 0; $i < sizeof($data); $i+=5, $j++) {
@@ -114,7 +114,7 @@ class JFormFieldGeoData extends JFormField {
         $output .= '<input required aria-required="true" type="text" name="' . $this->name . '[]" class="'. $this->id . '_lng geoDataHolderLng input-medium" value="' . $data[$i + 1] . '" />';
         $output .= '</div>';
         $output .= '<div class="geoDataHolderWrapper"><a href="#geocodemap" class="btn fancymodal icon-apply geoDataGeocodeLink">' . JText::_('MOD_PROFIL_RESPONSIVE_MAP_GEOCODE') . '</a></div>';
-        
+
         $output .= '<div class="geoDataHolderWrapperSingle"><div>' . JText::_('MOD_PROFIL_RESPONSIVE_MAP_LABEL') . '</div>';
         $output .= '<textarea name="' . $this->name . '[]" class="'. $this->id . '_label inputbox">' . $data[$i + 2] . '</textarea>';
 
@@ -168,7 +168,7 @@ class JFormFieldGeoData extends JFormField {
         if(!empty($marker_icons)) {
           foreach ($marker_icons as $marker_icon_key => $marker_icon_name) {
             $marker_list .= '<option value="' . $marker_path['website_path'] . $marker_icon_name . '" style="background-image:url(' . $marker_path['administrator_path'] .  $marker_icon_name . '); background-repeat: no-repeat; padding-left: 20px; background-position: left center;background-size:14px auto;">' . $marker_icon_name . '</option>';
-            
+
           }
         }
       }
@@ -177,7 +177,7 @@ class JFormFieldGeoData extends JFormField {
       $output .= '<div class="geoDataHolderWrapper"><div>' . JText::_('MOD_PROFIL_RESPONSIVE_MAP_ICON') . '</div>' . $marker_list . '</div>';
       $output .= '</div>';
     }
-    
+
     $add_more_button = '<a href="#" id="geoDataAddMore" class="btn icon-save-new">' . JText::_('MOD_PROFIL_RESPONSIVE_MAP_ADD_MORE') . '</a>';
 
     // content for the fancybox, displays an input field and a map to target the location easily

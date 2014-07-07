@@ -1,6 +1,6 @@
 <?php
 /**
- * @version   1.0.2
+ * @version   1.1.1
  * @package   Profil responsive map (module)
  * @author    David Hoffmann - http://www.profilpr.de
  * @copyright Copyright (c) 2014 Profilpr. All rights reserved.
@@ -18,7 +18,7 @@ class ProfilResponsiveMapHelper {
   function show($coordinatesArray, $parameters, $template, $mod_name){
     // API
     $document = JFactory::getDocument();
-    
+
     // get the coordinate data in a more readable way
     $coordinates = self::get_coordinates($coordinatesArray);
     $result = array();
@@ -40,10 +40,10 @@ class ProfilResponsiveMapHelper {
 
       // google api
       $document->addScript('http://maps.googleapis.com/maps/api/js?sensor=false&v=3.exp&libraries=weather');
-      
+
       // jquery gmap script
       $document->addScript(JURI::base().'modules/' . $mod_name . '/js/jquery.gmap.js');
-      
+
       // custom jquery to run the jquery gmap script
       $document->addScript(JURI::base().'modules/' . $mod_name . '/js/responsive_map.js');
 
@@ -61,8 +61,8 @@ class ProfilResponsiveMapHelper {
       // add coordinate data to javascript map array
       foreach ($coordinates as $key => $value) {
         $result['coordinates'][$key] = array(
-          'latitude' => $value['latitude'], 
-          'longitude' => $value['longitude'], 
+          'latitude' => $value['latitude'],
+          'longitude' => $value['longitude'],
           'label' => $value['label'],
           'popup' => ($value['popup'] ? true : false),
           'icon' => JURI::root() . '/' . $value['icon'],
@@ -72,12 +72,12 @@ class ProfilResponsiveMapHelper {
       }
 
       // add general settings to javascript map array
-      $result['general'] = array( 
-        'hue' => $parameters['color'], 
+      $result['general'] = array(
+        'hue' => $parameters['color'],
         'gamma' => $parameters['contrast'],
         'saturation' => $parameters['saturation'],
         'lightness' => $parameters['lightness'],
-        'zoom' => (int)$parameters['zoom'], 
+        'zoom' => (int)$parameters['zoom'],
         'panControl' => ($parameters['panControl'] ? true : false),
         'zoomControl' => ($parameters['zoomControl'] ? true : false),
         'mapTypeControl' => ($parameters['mapTypeControl'] ? true : false),
@@ -104,7 +104,7 @@ class ProfilResponsiveMapHelper {
         'template' => $parameters['template'],
         'description' => (!empty($parameters['description']) ? '<div class="responsive_map_description">' . $parameters['description'] . '</div>' : '')
       );
-      
+
       // add the javascript map array to the page
       $js = 'var ' . $result['identifier'] . '=' . json_encode( $result ) . ';';
       $document->addScriptDeclaration($js);

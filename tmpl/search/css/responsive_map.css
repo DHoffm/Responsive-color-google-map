@@ -1,6 +1,6 @@
 /**
 
- * @version   1.0.2
+ * @version   1.1.1
 
  * @package   Profil responsive map (module)
 
@@ -15,32 +15,32 @@
 /* Template: Default */
 
 .search_responsive_map {
-  height: 400px; 
+  height: 400px;
   width: 100%;
   margin: 0 auto;
 }
-div.search_responsive_map, div.search_responsive_map div{ 
+div.search_responsive_map, div.search_responsive_map div{
   overflow:visible;
 }
 .search_responsive_map img {
   max-width: none!important;
 }
-img[src*="iws3.png"] { 
+img[src*="iws3.png"] {
   display: none;
 }
 .search_responsive_map .gm-style-iw {
-  max-width: none !important; 
+  max-width: none !important;
   min-width: none !important;
-  max-height: none !important; 
-  min-height: none !important; 
-  overflow-y: hidden !important; 
-  overflow-x: hidden !important; 
-  line-height: normal !important; 
+  max-height: none !important;
+  min-height: none !important;
+  overflow-y: hidden !important;
+  overflow-x: hidden !important;
+  line-height: normal !important;
   padding: 5px !important;
 }
 
-.gm-style-iw a:link, .gm-style-iw a:visited, .gm-style-iw a:hover, .gm-style-iw a:active { 
-  text-decoration: underline !important; 
+.gm-style-iw a:link, .gm-style-iw a:visited, .gm-style-iw a:hover, .gm-style-iw a:active {
+  text-decoration: underline !important;
 }
 .gm-style .gm-style-iw div {
   font-size: 14px !important;

@@ -1,6 +1,6 @@
 <?php
 /**
- * @version   1.0.2
+ * @version   1.1.1
  * @package   Profil responsive map (module)
  * @author    David Hoffmann - http://www.profilpr.de
  * @copyright Copyright (c) 2014 Profilpr. All rights reserved.
