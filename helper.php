@@ -81,6 +81,7 @@ class ProfilResponsiveMapHelper {
         'panControl' => ($parameters['panControl'] ? true : false),
         'zoomControl' => ($parameters['zoomControl'] ? true : false),
         'mapTypeControl' => ($parameters['mapTypeControl'] ? true : false),
+        'mapType' => $parameters['mapType'],
         'scaleControl' => ($parameters['scaleControl'] ? true : false),
         'streetViewControl' => ($parameters['streetViewControl'] ? true : false),
         'scrollwheel' => ($parameters['scrollwheel'] ? true : false),

@@ -26,6 +26,7 @@ $parameters['zoom'] = $params->get('profilResponsiveMapZoom');
 $parameters['panControl'] = $params->get('profilResponsivePanControl');
 $parameters['zoomControl'] = $params->get('profilResponsiveZoomControl');
 $parameters['mapTypeControl'] = $params->get('profilResponsiveMapTypeControl');
+$parameters['mapType'] = $params->get('profilResponsiveMapType');
 $parameters['scaleControl'] = $params->get('profilResponsiveScaleControl');
 $parameters['streetViewControl'] = $params->get('profilResponsiveStreetViewControl');
 $parameters['scrollwheel'] = $params->get('profilResponsiveScrollwheel');

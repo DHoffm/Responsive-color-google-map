@@ -1,4 +1,4 @@
-<?xml version="1.1.1" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <extension type="module" client="site" version="3.1" method="upgrade">
   <name>Responsive color google map</name>
   <author>David Hoffmann</author>
@@ -30,6 +30,12 @@
         <field name="profilResponsiveMapTypeControl" type="radio" default="1" label="MOD_PROFIL_RESPONSIVE_MAP_MAP_TYPE_CONTROL" description="">
           <option value="0">MOD_PROFIL_RESPONSIVE_MAP_NO</option>
           <option value="1">MOD_PROFIL_RESPONSIVE_MAP_YES</option>
+        </field>
+        <field name="profilResponsiveMapType" type="radio" default="0" label="MOD_PROFIL_RESPONSIVE_MAP_TYPE" description="">
+          <option value="0">MOD_PROFIL_RESPONSIVE_MAP_TYPE_ROADMAP</option>
+          <option value="1">MOD_PROFIL_RESPONSIVE_MAP_TYPE_SATELLITE</option>
+          <option value="2">MOD_PROFIL_RESPONSIVE_MAP_TYPE_HYBRID</option>
+          <option value="3">MOD_PROFIL_RESPONSIVE_MAP_TYPE_TERRAIN</option>
         </field>
         <field name="profilResponsiveScaleControl" type="radio" default="1" label="MOD_PROFIL_RESPONSIVE_MAP_SCALE_CONTROL" description="">
           <option value="0">MOD_PROFIL_RESPONSIVE_MAP_NO</option>

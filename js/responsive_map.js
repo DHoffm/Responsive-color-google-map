@@ -62,8 +62,26 @@ jQuery( document ).ready(function( $ ) {
         }
         custom_markers.push(marker);
       });
+
+      switch (config.mapType) {
+        case "1":
+          config.mapType = google.maps.MapTypeId.SATELLITE;
+          break;
+        case "2":
+          config.mapType = google.maps.MapTypeId.HYBRID;
+          break;
+        case "3":
+          config.mapType = google.maps.MapTypeId.TERRAIN;
+          break;
+        case "0":
+        default:
+          config.mapType = google.maps.MapTypeId.ROADMAP;
+          break;
+      }
+      console.log(config.mapType);
+
       var map = $('#' + identifier).gMap({
-        maptype: google.maps.MapTypeId.ROADMAP,
+        maptype: config.mapType,
         zoom: config.zoom,
         markers: custom_markers,
         panControl: config.panControl,
@@ -88,6 +106,7 @@ jQuery( document ).ready(function( $ ) {
       });
 
       var gmap = $('#' + identifier).data('gmap').gmap;
+      var markers = $('#' + identifier).data('gmap').markers;
 
       var marker_amount = 0; // Object.keys(markers).length is not supported in IE < 9 therefore use a loop
       for (i in markers) {
