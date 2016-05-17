@@ -1,4 +1,4 @@
-Responsive-color-google-map
+DEPRECATED: Responsive-color-google-map
 ===========================
 
 display a custom colored responsive Google map (api 3) in Joomla 2.5/3.0
@@ -18,8 +18,6 @@ This module is capable of doing the following for you:
 - display a map with a route search 
 
 Also this module is translatable and is available in german, english and french
-
-For examples check out the demo page: http://map.profilpr.de/
 
 ATTENTION:
 If your maps are not visible in Firefox that might be because of the following firebug/firefox bug which should be fixed in the latest version:
